@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'header.dart';     // body.dart をインポート
 import 'footer.dart';   // footer.dart をインポート
 import 'body.dart';     // body.dart をインポート
-
+import 'movie.dart';     // body.dart をインポート
 
 
 

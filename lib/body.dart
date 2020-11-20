@@ -9,6 +9,7 @@ import 'rect.dart';
 import 'file.dart';
 import 'httpController.dart';
 import 'dart:io'; // 追加
+import 'movie.dart'; // 追加
 
 // グローバル変数
 _Body MyBody = _Body();
@@ -33,7 +34,7 @@ class _Body extends State<Body> {
   int dlBaseCnt=0;
 
   @override
-  void initState({int init=1}) {
+  void initState({int init}) {
     //httpController().getTitleData();
     //httpController().getCharacterData();
     //httpController().getcategoryData();
@@ -424,6 +425,24 @@ class _Body extends State<Body> {
         return AlertDialog(
           title: Text(_title),
           content: Text(_text),
+          actions: <Widget>[
+            // ボタン領域
+            FlatButton(
+              child: Text("OK"),
+              onPressed: () => Navigator.pop(context),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void popup2(){
+    showDialog(
+      context: context,
+      builder: (_) {
+        return AlertDialog(
+          content: VideoPlayerPage(),
           actions: <Widget>[
             // ボタン領域
             FlatButton(

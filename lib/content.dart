@@ -33,7 +33,8 @@ class Content{
       return InkWell(
         child: Text(c[0]+"※"),
         onTap: () {
-            MyBody.popup("説明",c[1]);
+          MyBody.popup("説明",c[1]);
+          //MyBody.popup2();
             print("value of your text");
           },
       );
